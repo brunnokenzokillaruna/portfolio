@@ -1,0 +1,74 @@
+.HeroSection {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  z-index: 0;
+  animation: shrinkImage 1.5s ease-out forwards;
+}
+
+.hero-image {
+  max-width: 685px;
+  max-height: 435px;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+.hero-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.HeroSection h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+  position: relative;
+  opacity: 0;
+  animation: textAppear 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.HeroSection h1:nth-child(2) {
+  -webkit-text-stroke: 2px var(--primary-text-color);
+  color: transparent;
+  z-index: 2;
+}
+
+.HeroSection h1:nth-child(3) {
+  z-index: 1;
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shrinkImage {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}

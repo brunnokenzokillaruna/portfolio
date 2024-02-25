@@ -1,0 +1,89 @@
+.ProjectsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    color: var(--secondary-text-color);
+    background-color: var(--background-color);
+    height: 100vh;
+  }
+  
+  .ProjectsTitle {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    margin-bottom: 2rem;
+    opacity: 0;
+  }
+
+  .ProjectsTitle.visible {
+    animation: contentAppear 2s ease-out forwards;
+  }
+  
+  .ProjectsContent {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    width: 80%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .ProjectItem {
+    min-width: 300px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .ProjectImage {
+    width: 100%;
+    max-height: 350px;
+    margin-bottom: 1rem;
+  }
+  
+  .ProjectLabels span, .ProjectLabels a {
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+  }
+  
+  .ProjectLabels a {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+
+  .ProjectLabels a:hover {
+    background-color: #1A1A1A;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .ProjectsContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .ProjectItem {
+      width: 80%;
+    }
+    
+    .ProjectLabels span, .ProjectLabels a {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  
+  @keyframes contentAppear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

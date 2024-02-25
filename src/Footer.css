@@ -1,0 +1,51 @@
+.Footer {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .FooterContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .BackToTop {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Arrows {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Arrows img {
+    width: 10px;
+    margin-left: 5px;
+    margin-top: 1px;
+  }
+  
+  @media (max-width: 768px) {
+    .FooterContent {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .BackToTop {
+      margin-top: 10px;
+    }
+  
+    .Arrows img {
+      margin: 0 auto;
+    }
+  }
+  
