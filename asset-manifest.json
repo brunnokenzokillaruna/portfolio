@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/git/static/css/main.7f56b06b.css",
+    "main.js": "/git/static/js/main.f9c0d8ab.js",
+    "static/js/453.1407b060.chunk.js": "/git/static/js/453.1407b060.chunk.js",
+    "static/media/hero.jpeg": "/git/static/media/hero.3309260b84995e525d22.jpeg",
+    "static/media/infostream.png": "/git/static/media/infostream.eb9a4089aa7fa587605d.png",
+    "static/media/grandeur.png": "/git/static/media/grandeur.116b4e804a15e1816260.png",
+    "static/media/wealthwise.png": "/git/static/media/wealthwise.81dab7a5e27ea151c6ea.png",
+    "static/media/picture.jpeg": "/git/static/media/picture.296bc6adc130e9ec6195.jpeg",
+    "static/media/androidstudio.svg": "/git/static/media/androidstudio.9c4ac9d6f5f8c9a243f75d68d33a73fe.svg",
+    "static/media/mysql.svg": "/git/static/media/mysql.38eb3547b2490610717091ab0c9e0d0a.svg",
+    "static/media/react.svg": "/git/static/media/react.cb881cb619a05615a7910595e834f158.svg",
+    "static/media/swift.svg": "/git/static/media/swift.87b4e0ebc45e48fa98d44389181be6ce.svg",
+    "static/media/java.svg": "/git/static/media/java.05190744841749f4bd4a258973ef10d7.svg",
+    "static/media/javascript.svg": "/git/static/media/javascript.7c46303505630eee7dc3716226234e1e.svg",
+    "static/media/figma.svg": "/git/static/media/figma.ec5aaea58daa2a292feae7d7af9ed1ac.svg",
+    "static/media/csharp.svg": "/git/static/media/csharp.eb569b01ec0e43518e982774dda20898.svg",
+    "static/media/github.svg": "/git/static/media/github.0d9e4ba571cd7ea0862f749276b2087a.svg",
+    "static/media/linkedin.svg": "/git/static/media/linkedin.f452a642de4a4d883e0c7f62ed3dbfe5.svg",
+    "static/media/python.svg": "/git/static/media/python.043896964b88038fda55dd40f3793993.svg",
+    "index.html": "/git/index.html",
+    "static/media/arrow.svg": "/git/static/media/arrow.6ec833586793b5b4f310238410ef226a.svg",
+    "static/media/css.svg": "/git/static/media/css.4b1f2ca52db8ec9771a6e92c17da4ef5.svg",
+    "static/media/html.svg": "/git/static/media/html.d4ad7d8117e24b326a28bea764bf07e5.svg",
+    "static/media/more.svg": "/git/static/media/more.32c31ac1c0d78eccedf3ee46dfa3fae7.svg",
+    "main.7f56b06b.css.map": "/git/static/css/main.7f56b06b.css.map",
+    "main.f9c0d8ab.js.map": "/git/static/js/main.f9c0d8ab.js.map",
+    "453.1407b060.chunk.js.map": "/git/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f56b06b.css",
+    "static/js/main.f9c0d8ab.js"
+  ]
+}
