@@ -15,8 +15,8 @@ const projects = [
   {
     image: projectImage2,
     year: "2022",
-    technologies: "HTML, CSS, JavaScript",
-    github: "https://github.com/example/project2"
+    technologies: "TypeScript, CSS, React",
+    github: "https://github.com/brunnokenzokillaruna/grandeur"
   },
   {
     image: projectImage3,
