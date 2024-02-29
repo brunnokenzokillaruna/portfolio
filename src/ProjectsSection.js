@@ -16,7 +16,7 @@ const projects = [
     image: projectImage2,
     year: "2022",
     technologies: "TypeScript, CSS, React",
-    github: "https://github.com/brunnokenzokillaruna/grandeur"
+    github: "https://github.com/brunnokenzokillaruna/grandeur/"
   },
   {
     image: projectImage3,
