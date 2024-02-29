@@ -9,8 +9,8 @@ const projects = [
   {
     image: projectImage1,
     year: "2024",
-    technologies: "Kotlin, Java, Android Studio",
-    github: "https://github.com/example/project1"
+    technologies: "Java, Android Studio",
+    github: "https://github.com/Android-Final-Project/android_news_app/"
   },
   {
     image: projectImage2,
@@ -22,7 +22,7 @@ const projects = [
     image: projectImage3,
     year: "2023",
     technologies: "Windows Forms, C#",
-    github: "https://github.com/example/project3"
+    github: "https://github.com/brunnokenzokillaruna/wealthwise/"
   },
 ];
 

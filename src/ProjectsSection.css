@@ -1,12 +1,13 @@
 .ProjectsSection {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: auto;
     padding: 20px;
     color: var(--secondary-text-color);
     background-color: var(--background-color);
-    height: 100vh;
+    height: 90vh;
   }
   
   .ProjectsTitle {
@@ -26,7 +27,6 @@
     overflow-x: auto;
     gap: 20px;
     align-items: center;
-    justify-content: start;
     width: 80%;
     padding: 20px;
     position: relative;
