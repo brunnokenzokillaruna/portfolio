@@ -7,7 +7,8 @@
     --secondary-button-bg-color: #1A1A1A;
     --secondary-button-text-color: #A19073;
     --link-color: #A89777;
-    --border-color: #8D7C60;
+    --border-color: #1A1A1A;
+    --hover: #2e2e2e;
   }
   
   [data-theme='dark'] {
@@ -20,6 +21,7 @@
     --secondary-button-text-color: #1A1A1A;
     --link-color: #786951;
     --border-color: #EAE3D7;
+    --hover: #cab590;
   }
 
   * {

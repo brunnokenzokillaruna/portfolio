@@ -7,18 +7,21 @@ import projectImage3 from './images/wealthwise.png';
 
 const projects = [
   {
+    name: "Info Stream",
     image: projectImage1,
     year: "2024",
     technologies: "Java, Android Studio",
     github: "https://github.com/Android-Final-Project/android_news_app/"
   },
   {
+    name: "Grandeur Website",
     image: projectImage2,
     year: "2022",
     technologies: "TypeScript, CSS, React",
     github: "https://github.com/brunnokenzokillaruna/grandeur/"
   },
   {
+    name: "Wealth Wise Planner",
     image: projectImage3,
     year: "2023",
     technologies: "Windows Forms, C#",
@@ -36,11 +39,14 @@ function ProjectsSection() {
       <div className="ProjectsContent">
         {projects.map((project, index) => (
           <div key={index} className="ProjectItem">
-            <img src={project.image} alt="Project" className="ProjectImage" />
+            <div className="ProjectImageWrapper">
+              <img src={project.image} alt="Project" className="ProjectImage" />
+              <div className="ProjectOverlay">{project.name}</div>
+            </div>
             <div className="ProjectLabels">
               <span>{project.year}</span>
               <span>{project.technologies}</span>
-              <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href={project.github}>GitHub</a>
             </div>
           </div>
         ))}
@@ -48,5 +54,6 @@ function ProjectsSection() {
     </section>
   );
 }
+
 
 export default ProjectsSection;
