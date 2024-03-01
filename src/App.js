@@ -17,39 +17,29 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY + window.innerHeight / 2;
-  
-      const heroSection = document.querySelector('.HeroSection');
+
       const phraseSection = document.querySelector('.PhraseSection');
-      const aboutSection = document.querySelector('#about');
       const servicesSection = document.querySelector('#services');
-      const projectsSection = document.querySelector('#projects');
       const contactSection = document.querySelector('#contact');
-  
+
       let newTheme = 'light';
-  
-      if (heroSection && currentScrollPosition >= heroSection.offsetTop && currentScrollPosition < heroSection.offsetTop + heroSection.offsetHeight) {
-        newTheme = 'light';
-      } else if (phraseSection && currentScrollPosition >= phraseSection.offsetTop && currentScrollPosition < phraseSection.offsetTop + phraseSection.offsetHeight) {
+
+      if (phraseSection && currentScrollPosition >= phraseSection.offsetTop && currentScrollPosition < phraseSection.offsetTop + phraseSection.offsetHeight) {
         newTheme = 'dark';
-      } else if (aboutSection && currentScrollPosition >= aboutSection.offsetTop && currentScrollPosition < aboutSection.offsetTop + aboutSection.offsetHeight) {
-        newTheme = 'light';
       } else if (servicesSection && currentScrollPosition >= servicesSection.offsetTop && currentScrollPosition < servicesSection.offsetTop + servicesSection.offsetHeight) {
         newTheme = 'dark';
-      } else if (projectsSection && currentScrollPosition >= projectsSection.offsetTop && currentScrollPosition < projectsSection.offsetTop + projectsSection.offsetHeight) {
-        newTheme = 'light';
       } else if (contactSection && currentScrollPosition >= contactSection.offsetTop && currentScrollPosition < contactSection.offsetTop + contactSection.offsetHeight) {
         newTheme = 'dark';
       }
-  
+
       if (theme !== newTheme) {
         setTheme(newTheme);
       }
     };
-  
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [theme]);
-  
 
   return (
     <ThemeProvider value={{ theme, setTheme }}>

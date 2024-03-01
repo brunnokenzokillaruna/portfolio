@@ -7,15 +7,13 @@
   background-color: var(--background-color);
   color: var(--primary-text-color);
   padding: 1rem;
-  width: 100%;
-  box-sizing: border-box;
+  width: auto;
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: calc(100% - 2rem);
   width: 100%;
   box-sizing: border-box;
   opacity: 0;
@@ -25,10 +23,8 @@
 }
 
 .nav-logo {
-  color: var(--primary-text-color);
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 700;
+  max-width: 100px;
+  height: auto;
 }
 
 .nav-links {
@@ -36,7 +32,6 @@
   display: flex;
   margin: 0;
   padding: 0;
-  flex-grow: 1;
   justify-content: flex-end;
 }
 
@@ -79,3 +74,55 @@
     transform: translateY(0);
   }
 }
+
+/* Media Query for Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  
+  .nav-logo {
+    max-width: 80px;
+  }
+}
+
+/* Media Query for Landscape Phones to Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav-links {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .nav-links li {
+    margin: 0 0.5rem;
+  }
+  
+  .nav-logo {
+    max-width: 70px;
+  }
+  
+  .NavBar {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .nav-links li {
+    margin: 0 0.10rem;
+  }
+
+  .nav-links li a {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+  .nav-logo {
+    max-width: 60px;
+  }
+}
+

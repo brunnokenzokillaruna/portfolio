@@ -1,5 +1,5 @@
 .PhraseSection {
-    height: 80vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,12 +8,29 @@
     background-color: var(--background-color);
   }
   
-  .PhraseSection p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 2.5rem;
-    line-height: 1.6;
-    color: var(--primary-text-color);
-    text-align: justify;
-  }
+.PhraseSection p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  line-height: 1.6;
+  color: var(--primary-text-color);
+  text-align: justify;
+}
   
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .PhraseSection {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+  }
+
+  .PhraseSection p {
+    font-size: 1.6rem;
+    padding: 0;
+    max-width: none;
+  }
+}

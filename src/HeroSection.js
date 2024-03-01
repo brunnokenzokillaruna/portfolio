@@ -9,9 +9,9 @@ function HeroSection() {
         <img src={heroImage} alt="Abstract Art" className="hero-image" />
       </div>
       <div className="hero-text-wrapper">
-        <h1>Hey, I'm Brunno</h1>
-        <h1>Hey, I'm Brunno</h1>
-        <h1>Hey, I'm Brunno</h1>
+        <h1><span>Hey, I'm Brunno</span></h1>
+        <h1><span>Hey, I'm Brunno</span></h1>
+        <h1><span>Hey, I'm Brunno</span></h1>
       </div>
     </section>
   );
