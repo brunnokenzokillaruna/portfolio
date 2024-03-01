@@ -8,78 +8,168 @@
     color: var(--primary-text-color);
     background-color: var(--background-color);
     height: 90vh;
-  }
+}
   
+.AboutTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 2rem;
+  opacity: 0;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--border-color);
+}
+  
+.AboutTitle.visible, .AboutText.visible p, .AboutImage.visible img {
+  animation: contentAppear 2s ease-out forwards;
+  animation-delay: 1s;
+}
+  
+.AboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  align-items: start;
+  justify-content: center;
+  width: 70%;
+  max-width: 1440px;
+  text-align: justify;
+}
+  
+.AboutText {
+  padding-left: 200px;
+}
+  
+.AboutText p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.AboutText p {
+  opacity: 0;
+}
+  
+.AboutImage {
+  padding: 0 60px;
+}
+  
+.AboutImage img {
+  border-radius: 10px;
+  width: 80%;
+  max-height: 500px;
+  object-fit: cover;
+  border: 3px solid var(--border-color);
+  opacity: 0;
+}
+  
+@keyframes contentAppear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Query for Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1440px) {
   .AboutTitle {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: var(--secondary-text-color);
-    margin-bottom: 2rem;
-    opacity: 0;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: var(--border-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin: auto;
   }
-  
-  .AboutTitle.visible, .AboutText.visible p, .AboutImage.visible img {
-    animation: contentAppear 2s ease-out forwards;
-    animation-delay: 1s;
-  }
-  
+
   .AboutContent {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    align-items: start;
-    justify-content: center;
-    width: 70%;
-    max-width: 1440px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .AboutText {
+    padding: 0 50px;
+    max-width: 600px;
+  }
+
+  .AboutImage img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Media Query for Landscape Phones to Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .AboutTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+  }
+
+  .AboutContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .AboutText, .AboutImage {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .paragraph {
     text-align: justify;
   }
-  
-  .AboutText {
-    padding-left: 200px;
+
+  .AboutImage img {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+    max-height: none;
   }
-  
-  .AboutText p:first-child {
-    font-weight: bold;
-    font-size: 1.2rem;
+}
+
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .AboutSection {
+    height: auto;
+    padding: 20px;
+  }
+
+  .AboutTitle {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .AboutContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+  }
+
+  .AboutText, .AboutImage {
+    padding: 0;
+    width: 100%;
   }
 
   .AboutText p {
-    opacity: 0;
+    font-size: 1rem;
+    text-align: justify;
+    max-width: 600px;
+    margin: 10px auto;
   }
-  
-  .AboutImage {
-    padding: 0 60px;
-  }
-  
+
   .AboutImage img {
-    border-radius: 10px;
-    width: 80%;
-    max-height: 500px;
-    object-fit: cover;
-    border: 3px solid var(--border-color);
-    opacity: 0;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    max-height: none;
   }
-  
-  @media (max-width: 768px) {
-    .AboutContent {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  
-    .AboutText, .AboutImage {
-      padding: 0;
-    }
-  
-    .AboutImage img {
-      margin-top: 20px;
-      width: 80%;
-    }
-  }
-  
-  @keyframes contentAppear {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
+}

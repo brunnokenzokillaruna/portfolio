@@ -54,15 +54,6 @@
   animation: iconAppear 2s ease-out forwards;
 }
 
-@media (max-width: 768px) {
-  .ServicesContent {
-    grid-template-columns: 1fr;
-  }
-  .ServiceItem {
-    padding: 10px;
-  }
-}
-
 @keyframes contentAppear {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -71,4 +62,82 @@
 @keyframes iconAppear {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Query for Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .ServicesContent {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .ServiceItem {
+    padding: 20px;
+  }
+
+  .ServiceIcon {
+    width: 30%;
+    height: auto;
+  }
+}
+
+/* Media Query for Landscape Phones to Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .ServicesContent {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .ServiceItem {
+    padding: 0;
+  }
+
+  .ServiceIcon {
+    width: 15%;
+    height: auto;
+  }
+
+  .ServiceItem h3, .ServiceItem p {
+    text-align: center;
+  }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .ServicesSection {
+    padding: 20px;
+    height: auto;
+  }
+
+  .ServicesTitle {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .ServicesContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .ServiceItem {
+    padding: 10px;
+  }
+
+  .ServiceIcon {
+    width: 15%;
+    height: auto;
+    margin: auto;
+  }
+
+  .ServiceItem h3, .ServiceItem p {
+    text-align: center;
+    font-size: 1rem;
+  }
 }

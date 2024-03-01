@@ -122,3 +122,123 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+/* Media Query for Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .ContactSection {
+    display: block;
+  }
+
+  .ContactTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: auto;
+  }
+
+  .ContactContent {
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .ContactForm, .ContactDetails {
+    flex-basis: calc(50% - 20px);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .DigitalSpaces img {
+    margin-right: 10px;
+  }
+}
+
+/* Media Query for Landscape Phones to Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .ContactSection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ContactTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  .ContactContent {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .ContactForm, .ContactDetails {
+    flex: 1 1 calc(50% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 280px;
+  }
+
+  .DigitalSpaces img {
+    margin-right: 10px;
+  }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .ContactSection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: auto;
+  }
+
+  .ContactTitle {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .ContactContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  .ContactForm, .ContactDetails {
+    flex-basis: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .ContactForm input, .ContactForm textarea, .ContactForm button {
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .DigitalSpaces img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}

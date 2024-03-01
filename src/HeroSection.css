@@ -72,3 +72,84 @@
     transform: scale(1);
   }
 }
+
+/* Media Query for Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .HeroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+  }  
+
+  .HeroSection h1 {
+    font-size: 4rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .HeroSection h1 span {
+    display: block;
+    width: 650px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    max-height: auto;
+  }
+}
+
+/* Media Query for Landscape Phones to Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .HeroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+  }  
+
+  .HeroSection h1 {
+    font-size: 4rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .HeroSection h1 span {
+    display: block;
+    width: 650px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    max-height: auto;
+  }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .HeroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+  }
+
+  .HeroSection h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .HeroSection h1 span {
+    display: block;
+    width: 650px;
+  }
+
+  .hero-image {
+    max-width: 90%;
+    max-height: auto;
+  }
+}

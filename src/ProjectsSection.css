@@ -35,7 +35,8 @@
 }
 
 .ProjectItem {
-  width: 450px;
+  max-width: 100%;
+  width: calc(100% - 40px);
   height: 350px;
   border: 1px solid #8D7C60;
   padding: 20px;
@@ -111,4 +112,114 @@
 @keyframes contentAppear {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Query for Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .ProjectsSection {
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ProjectsContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .ProjectItem {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 70%;
+  }
+
+  .ProjectIcon, .ProjectItem h3, .ProjectItem p, .ProjectLabels a {
+    margin: auto;
+    width: fit-content;
+  }
+}
+
+/* Media Query for Landscape Phones to Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .ProjectsSection {
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ProjectsContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .ProjectItem {
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .ProjectsSection {
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .ProjectsContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: calc(100% - 40px);
+    margin: auto;
+  }
+
+  .ProjectItem {
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ProjectImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .ProjectItem h3, .ProjectItem p, .ProjectLabels a {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .ProjectLabels span, .ProjectLabels a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 2px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
 }
