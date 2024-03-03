@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Brunno's Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the repository of my personal portfolio! This portfolio showcases my skills, projects, and services in web and software development. It's designed to offer a comprehensive look at my professional capabilities and interests.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+My portfolio is structured to provide insights into my work, the technologies I've mastered, and the services I offer. It's built with React, demonstrating my ability to create dynamic and responsive web applications.
 
-### `npm start`
+### Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Dynamic Theme Switching**: Utilizes a custom React context (`ThemeContext.js`) to dynamically change the theme based on the user's scroll position.
+- **Interactive Project Carousel**: Features a carousel (`ProjectsSection.js`) powered by `react-responsive-carousel` to display my projects in an engaging manner.
+- **Services Showcase**: Highlights my services using icons and descriptions (`ServicesSection.js`), making it easy for potential clients to understand what I offer.
+- **Responsive Design**: Ensures that the portfolio looks great on devices of all sizes, from mobile phones to desktops.
+- **Accessibility and Performance**: Implements best practices to ensure the site is accessible and performs well across all platforms.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technologies Used
 
-### `npm test`
+- React
+- CSS Modules for scoped and maintainable styles
+- `react-responsive-carousel` for the projects carousel
+- Intersection Observer API for scroll-based animations (`useIntersectionObserver.js`)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Sections
 
-### `npm run build`
+1. **Hero Section (`HeroSection.js`)**: A visually striking introduction to the portfolio.
+2. **About Me (`AboutSection.js`)**: Provides a detailed background about myself and my journey into web and software development.
+3. **Services (`ServicesSection.js`)**: Outlines the services I offer, including development with Java, Android Studio, C#, CSS, and more.
+4. **Projects (`ProjectsSection.js`)**: Showcases my projects with an interactive carousel.
+5. **Contact (`ContactSection.js`)**: Allows visitors to get in touch with me directly through a simple and intuitive form.
+6. **Navigation Bar (`NavBar.js`)**: Offers easy navigation throughout the portfolio.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To view my portfolio, visit [https://brunnokenzokillaruna.github.io/portfolio/]. To run this project locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repository.
+2. Install dependencies with `npm install`.
+3. Start the development server with `npm start`.
+4. Open `http://localhost:3000` to view it in your browser.
 
-### `npm run eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Feel free to reach out to me for collaboration, freelance work, or just to say hi!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Email: brunnokenzokillaruna@gmail.com
+- LinkedIn: [Brunno Kenzo](https://www.linkedin.com/in/brunnokenzo/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Thank you for visiting my portfolio repository. I'm looking forward to connecting with you!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
