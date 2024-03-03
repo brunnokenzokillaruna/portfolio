@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7e1989ee.css",
-    "main.js": "/portfolio/static/js/main.2df1ac22.js",
+    "main.css": "/portfolio/static/css/main.b1a1d053.css",
+    "main.js": "/portfolio/static/js/main.1a145f51.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/TriviaGame.png": "/portfolio/static/media/TriviaGame.49769119635e4b22d235.png",
     "static/media/hero.jpeg": "/portfolio/static/media/hero.3309260b84995e525d22.jpeg",
     "static/media/wealthwise.png": "/portfolio/static/media/wealthwise.200b2afe20e27c7faa04.png",
     "static/media/infostream.png": "/portfolio/static/media/infostream.c29daf923d9d8d46ac16.png",
@@ -26,12 +27,12 @@
     "static/media/css.svg": "/portfolio/static/media/css.6d8f7e23d9b68d4f817ced91becd5ba4.svg",
     "static/media/html.svg": "/portfolio/static/media/html.cbc947c38f9bafdd1b04526db8638b6d.svg",
     "static/media/more.svg": "/portfolio/static/media/more.dd81ce49adc7c31dc9a0dfc377490a43.svg",
-    "main.7e1989ee.css.map": "/portfolio/static/css/main.7e1989ee.css.map",
-    "main.2df1ac22.js.map": "/portfolio/static/js/main.2df1ac22.js.map",
+    "main.b1a1d053.css.map": "/portfolio/static/css/main.b1a1d053.css.map",
+    "main.1a145f51.js.map": "/portfolio/static/js/main.1a145f51.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e1989ee.css",
-    "static/js/main.2df1ac22.js"
+    "static/css/main.b1a1d053.css",
+    "static/js/main.1a145f51.js"
   ]
 }
