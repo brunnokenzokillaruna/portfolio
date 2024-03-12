@@ -41,8 +41,8 @@
 }
 
 .visible {
-  opacity: 1;
-  animation: contentAppear 1.5s ease-out forwards;
+  opacity: 0;
+  animation: contentAppear 3s ease-out forwards;
 }
 
 @keyframes contentAppear {
