@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b1a1d053.css",
-    "main.js": "/portfolio/static/js/main.1a145f51.js",
+    "main.css": "/portfolio/static/css/main.59ab974d.css",
+    "main.js": "/portfolio/static/js/main.370b1467.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/TriviaGame.png": "/portfolio/static/media/TriviaGame.49769119635e4b22d235.png",
     "static/media/hero.jpeg": "/portfolio/static/media/hero.3309260b84995e525d22.jpeg",
@@ -9,8 +9,8 @@
     "static/media/infostream.png": "/portfolio/static/media/infostream.c29daf923d9d8d46ac16.png",
     "static/media/grandeur.png": "/portfolio/static/media/grandeur.07c1d52c1f1fc676d902.png",
     "static/media/picture.jpeg": "/portfolio/static/media/picture.296bc6adc130e9ec6195.jpeg",
-    "static/media/Zenno2.png": "/portfolio/static/media/Zenno2.d63a270ef7452ab4b3e7.png",
-    "static/media/Zenno.png": "/portfolio/static/media/Zenno.7d778a85f019de6663ca.png",
+    "static/media/kenzo-light.png": "/portfolio/static/media/kenzo-light.f1120ef9d194118e402d.png",
+    "static/media/kenzo-dark.png": "/portfolio/static/media/kenzo-dark.e338b707b0ea0187f8b7.png",
     "static/media/androidstudio.svg": "/portfolio/static/media/androidstudio.283ceb80b5a55f5b083ad0814cdb6078.svg",
     "static/media/mysql.svg": "/portfolio/static/media/mysql.91bf15d56a47f0dc9ff3278bb9a81615.svg",
     "static/media/react.svg": "/portfolio/static/media/react.639710a5732dc0b9373670444a28a5d2.svg",
@@ -27,12 +27,12 @@
     "static/media/css.svg": "/portfolio/static/media/css.6d8f7e23d9b68d4f817ced91becd5ba4.svg",
     "static/media/html.svg": "/portfolio/static/media/html.cbc947c38f9bafdd1b04526db8638b6d.svg",
     "static/media/more.svg": "/portfolio/static/media/more.dd81ce49adc7c31dc9a0dfc377490a43.svg",
-    "main.b1a1d053.css.map": "/portfolio/static/css/main.b1a1d053.css.map",
-    "main.1a145f51.js.map": "/portfolio/static/js/main.1a145f51.js.map",
+    "main.59ab974d.css.map": "/portfolio/static/css/main.59ab974d.css.map",
+    "main.370b1467.js.map": "/portfolio/static/js/main.370b1467.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1a1d053.css",
-    "static/js/main.1a145f51.js"
+    "static/css/main.59ab974d.css",
+    "static/js/main.370b1467.js"
   ]
 }
