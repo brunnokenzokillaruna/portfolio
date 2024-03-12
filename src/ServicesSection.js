@@ -19,19 +19,20 @@ function ServicesSection() {
   const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
 
   const icons = [
-    { src: javaIcon, alt: "Java", text: "Backend Development with Java" },
-    { src: androidStudioIcon, alt: "Android Studio", text: "Android App Development" },
-    { src: csharpIcon, alt: "C#", text: "App Development with C#" },
-    { src: cssIcon, alt: "CSS", text: "Styling with CSS" },
-    { src: figmaIcon, alt: "Figma", text: "Design with Figma" },
-    { src: htmlIcon, alt: "HTML", text: "Markup with HTML" },
-    { src: javascriptIcon, alt: "JavaScript", text: "Interactive Websites with JavaScript" },
-    { src: mysqlIcon, alt: "MySQL", text: "Database Management with MySQL" },
-    { src: pythonIcon, alt: "Python", text: "App with Python" },
-    { src: swiftIcon, alt: "Swift", text: "iOS App Development with Swift" },
-    { src: reactIcon, alt: "React", text: "Frontend Development with React" },
-    { src: moreIcon, alt: "More", text: "Proficient in additional technologies" },
+    { src: javaIcon, alt: "Java", text: "Java for Backend Development" },
+    { src: androidStudioIcon, alt: "Android Studio", text: "Building Apps with Android Studio" },
+    { src: csharpIcon, alt: "C#", text: "C# for Application Development" },
+    { src: cssIcon, alt: "CSS", text: "CSS for Styling" },
+    { src: figmaIcon, alt: "Figma", text: "UI/UX Design with Figma" },
+    { src: htmlIcon, alt: "HTML", text: "HTML for Web Markup" },
+    { src: javascriptIcon, alt: "JavaScript", text: "JavaScript for Web Interactivity" },
+    { src: mysqlIcon, alt: "MySQL", text: "MySQL for Database Management" },
+    { src: pythonIcon, alt: "Python", text: "Python for Software Development" },
+    { src: swiftIcon, alt: "Swift", text: "Swift for iOS Development" },
+    { src: reactIcon, alt: "React", text: "React for Frontend Development" },
+    { src: moreIcon, alt: "More", text: "Versatile in Additional Technologies" },
   ];
+  
 
   return (
     <section className="ServicesSection" id="services" ref={sectionRef}>

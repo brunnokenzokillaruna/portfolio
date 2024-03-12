@@ -54,14 +54,17 @@
   background-color: var(--primary-button-bg-color);
   color: var(--primary-button-text-color);
   padding: 10px 16px;
-  border-radius: 20px;
+  border: 1px solid;
+  border-radius: 25px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 600;
 }
 
 .nav-links li a.lets-talk-btn:hover {
-  background-color: var(--hover);
-  color: var(--secondary-button-text-color);
+  background-color: transparent;
+  color: var(--primary-button-bg-color);
+  border: 1px solid;
+  border-color: var(--primary-button-bg-color);
 }
 
 @keyframes navAppear {
@@ -69,49 +72,14 @@
     opacity: 0;
     transform: translateY(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Media Query for Tablets and Small Desktops */
-@media (min-width: 769px) and (max-width: 1440px) {
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  
-  .nav-logo {
-    max-width: 80px;
-  }
-}
-
-/* Media Query for Landscape Phones to Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  .nav-links {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  
-  .nav-links li {
-    margin: 0 0.5rem;
-  }
-  
-  .nav-logo {
-    max-width: 70px;
-  }
-  
-  .NavBar {
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-
-/* Media Query for Phones */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .nav-links li {
     margin: 0 0.10rem;
   }
@@ -120,9 +88,50 @@
     font-size: 0.8rem;
     padding: 5px 10px;
   }
-  
+
   .nav-logo {
     max-width: 60px;
   }
 }
 
+@media (min-width: 601px) and (max-width: 900px) {
+  .nav-links {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav-links li {
+    margin: 0 0.5rem;
+  }
+
+  .nav-logo {
+    max-width: 70px;
+  }
+
+  .NavBar {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .nav-logo {
+    max-width: 80px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+
+  .nav-logo {
+    max-width: 100px;
+  }
+}

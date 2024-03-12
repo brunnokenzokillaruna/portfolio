@@ -1,13 +1,13 @@
 .PhraseSection {
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-    background-color: var(--background-color);
-  }
-  
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: var(--background-color);
+}
+
 .PhraseSection p {
   max-width: 800px;
   margin: 0 auto;
@@ -16,21 +16,33 @@
   color: var(--primary-text-color);
   text-align: justify;
 }
-  
-/* Media Query for Phones */
-@media (max-width: 480px) {
+
+@media (max-width: 600px) {
   .PhraseSection {
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    text-align: center;
   }
 
   .PhraseSection p {
     font-size: 1.6rem;
     padding: 0;
-    max-width: none;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .PhraseSection p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .PhraseSection p {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .PhraseSection p {
+    font-size: 2.5rem;
   }
 }

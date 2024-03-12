@@ -1,244 +1,126 @@
 .ContactSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    padding: 40px;
-    color: var(--secondary-text-color);
-    background-color: var(--background-color);
-    min-height: 80vh;
-  }
-  
-  .ContactTitle {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: var(--secondary-text-color);
-    margin-bottom: 2rem;
-    text-align: center;
-    opacity: 0;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: var(--border-color);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 40px;
+  color: var(--secondary-text-color);
+  background-color: var(--background-color);
+  min-height: 80vh;
+}
 
-  .ContactTitle.visible {
-    animation: contentAppear 2s ease-out forwards;
-  }
-  
+.ContactTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  opacity: 1;
+  animation: contentAppear 2s ease-out forwards;
+}
+
+.ContactContent {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.ContactDetails,
+.ContactForm {
+  flex-basis: 50%;
+  padding: 20px;
+  text-align: left;
+}
+
+.ContactForm p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.ContactForm p,
+.ContactForm input,
+.ContactForm textarea,
+.ContactForm button {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ContactForm input,
+.ContactForm textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  font-size: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.ContactForm button {
+  padding: 15px;
+  background-color: var(--primary-button-bg-color);
+  color: var(--primary-button-text-color);
+  border: 1px solid;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ContactForm button:hover {
+  background-color: transparent;
+  color: var(--primary-button-bg-color);
+  border: 1px solid;
+  border-color: var(--primary-button-bg-color);
+}
+
+.DigitalSpaces a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--link-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  max-width: 100px;
+}
+
+.DigitalSpaces img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.DigitalSpaces a:hover {
+  background-color: var(--border-color);
+  color: var(--hover-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
   .ContactContent {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: center;
-    width: 80%;
-    max-width: 1200px;
-  }
-  
-  .ContactDetails {
-    text-align: left;
-  }
-
-  .ContactForm, .ContactDetails {
-    flex-basis: 50%;
-    padding: 20px;
-  }
-  
-  .ContactForm p {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .ContactForm p:first-child {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .ContactForm input, .ContactForm textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 2px solid var(--border-color);
-    font-size: 1rem;
-    background-color: #fff;
-    font-family: inherit;
-    box-sizing: border-box;
-  }
-  
-  .ContactForm button {
-    width: calc(100% - 30px);
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    background-color: var(--primary-button-bg-color);
-    color: var(--primary-button-text-color);
-    font-weight: bold;
-    letter-spacing: 1px;
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: inherit;
-    box-sizing: border-box;
-  }
-  
-  .ContactForm button:hover {
-    background-color: var(--hover);
-    transition: all 0.5s ease;;
-  }
-  
-  .DigitalSpaces {
-    display: flex;
     flex-direction: column;
   }
-  
-  .DigitalSpaces a {
-    display: flex;
-    align-items: center;
-    color: var(--link-color);
-    margin-bottom: 10px;
-    width: 100px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .DigitalSpaces img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
 
-  .DigitalSpaces a:hover {
-    background-color: #f0f0f0;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+  .ContactDetails,
+  .ContactForm {
+    width: 100%;
   }
+}
 
-  .timeValue {
-    font-family: 'Digital-7', monospace;
-  }
-  
-  @keyframes contentAppear {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-/* Media Query for Tablets and Small Desktops */
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (max-width: 768px) {
   .ContactSection {
-    display: block;
+    padding: 20px;
   }
 
   .ContactTitle {
     font-size: 2.5rem;
-    text-align: center;
-    margin: auto;
-  }
-
-  .ContactContent {
-    flex-direction: row;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    width: 80%;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  .ContactForm, .ContactDetails {
-    flex-basis: calc(50% - 20px);
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .DigitalSpaces img {
-    margin-right: 10px;
   }
 }
 
-/* Media Query for Landscape Phones to Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  .ContactSection {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
+@media (max-width: 480px) {
   .ContactTitle {
     font-size: 2rem;
-    text-align: center;
-    margin: 0 auto 20px;
-  }
-
-  .ContactContent {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .ContactForm, .ContactDetails {
-    flex: 1 1 calc(50% - 20px);
-    padding: 10px;
-    box-sizing: border-box;
-    min-width: 280px;
-  }
-
-  .DigitalSpaces img {
-    margin-right: 10px;
-  }
-}
-
-/* Media Query for Phones */
-@media (max-width: 480px) {
-  .ContactSection {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: auto;
-  }
-
-  .ContactTitle {
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .ContactContent {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: calc(100% - 40px);
-    margin: 0 auto;
-  }
-
-  .ContactForm, .ContactDetails {
-    flex-basis: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  .ContactForm input, .ContactForm textarea, .ContactForm button {
-    width: calc(100% - 30px);
-    padding: 15px;
-    margin-bottom: 20px;
-  }
-
-  .DigitalSpaces img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
   }
 }

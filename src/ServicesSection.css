@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 20px;
+  padding: 150px 20px;
   color: var(--primary-text-color);
   background-color: var(--background-color);
-  height: 90vh;
+  height: auto;
 }
 
 .ServicesTitle {
@@ -15,31 +15,15 @@
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 2rem;
-  opacity: 0;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--border-color);
-}
-
-.ServicesTitle.visible {
-  animation: contentAppear 1.5s ease-out forwards;
-}
-
-.ServiceIcon, .ServiceItem h3, .ServiceItem p {
-  opacity: 0;
-}
-
-.visible {
-  animation: contentAppear 1.5s ease-out forwards;
+  opacity: 1;
 }
 
 .ServicesContent {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
-  max-width: 1200px;
+  gap: 20px;
+  width: 100%;
 }
 
 .ServiceItem {
@@ -50,94 +34,73 @@
   padding: 20px;
 }
 
-.ServiceIcon.visible, .ServiceItem h3.visible, .ServiceItem p.visible {
-  animation: iconAppear 2s ease-out forwards;
+.ServiceIcon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.visible {
+  opacity: 1;
+  animation: contentAppear 1.5s ease-out forwards;
 }
 
 @keyframes contentAppear {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes iconAppear {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Media Query for Tablets and Small Desktops */
-@media (min-width: 769px) and (max-width: 1440px) {
-  .ServicesContent {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 100%;
-    margin: auto;
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1200px) {
   .ServiceItem {
-    padding: 20px;
-  }
-
-  .ServiceIcon {
-    width: 30%;
-    height: auto;
+    flex-basis: calc(13% - 20px);
   }
 }
 
-/* Media Query for Landscape Phones to Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-  .ServicesContent {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 100%;
-    margin: auto;
-  }
-
-  .ServiceItem {
-    padding: 0;
-  }
-
-  .ServiceIcon {
-    width: 15%;
-    height: auto;
-  }
-
-  .ServiceItem h3, .ServiceItem p {
-    text-align: center;
-  }
-}
-
-/* Media Query for Phones */
-@media (max-width: 480px) {
-  .ServicesSection {
-    padding: 20px;
-    height: auto;
-  }
-
+@media (max-width: 1199px) and (min-width: 901px) {
   .ServicesTitle {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .ServicesContent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 100%;
-    margin: auto;
+    font-size: 2.5rem;
   }
 
   .ServiceItem {
-    padding: 10px;
+    flex-basis: calc(26% - 20px);
+  }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+  .ServiceItem {
+    flex-basis: calc(26% - 20px);
   }
 
   .ServiceIcon {
-    width: 15%;
-    height: auto;
-    margin: auto;
+    width: 50px;
   }
 
-  .ServiceItem h3, .ServiceItem p {
-    text-align: center;
-    font-size: 1rem;
+  .ServicesSection {
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .ServicesTitle {
+    font-size: 2rem;
+  }
+
+  .ServiceItem {
+    flex-basis: calc(26% - 20px);
+  }
+
+  .ServiceIcon {
+    width: 40px;
+  }
+
+  .ServicesSection {
+    margin: auto;
   }
 }

@@ -55,7 +55,7 @@ function ProjectsSection() {
   return (
     <section className="ProjectsSection" id="projects" ref={ref}>
       <h2 className={`ProjectsTitle ${isVisible ? 'visible' : ''}`}>My Projects</h2>
-      <Carousel className="ProjectsCarousel" showArrows={true} autoPlay={false} infiniteLoop={true} centerMode={false}>
+      <Carousel className="ProjectsCarousel" showArrows={true} autoPlay={false} infiniteLoop={true} centerMode={false} showStatus={false} showThumbs={false} showIndicators={false}>
         {projectChunks.map((chunk, index) => (
           <div key={index} className="ProjectPair">
             {chunk.map((project, projectIndex) => (
