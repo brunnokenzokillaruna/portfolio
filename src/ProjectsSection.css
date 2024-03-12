@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 20px;
+  padding: 140px 20px;
   color: var(--secondary-text-color);
   background-color: var(--background-color);
-  height: 80vh;
+  height: auto;
 }
 
 .ProjectsTitle {
@@ -15,23 +15,15 @@
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 2rem;
-  opacity: 0;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--border-color);
-}
-
-.ProjectsTitle.visible {
-  animation: contentAppear 2s ease-out forwards;
+  opacity: 1;
 }
 
 .ProjectsContent {
   display: flex;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  align-items: center;
-  width: 80%;
-  padding: 20px;
-  position: relative;
+  width: 100%;
 }
 
 .ProjectItem {
@@ -59,10 +51,12 @@
 }
 
 .ProjectImage {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: fill;
-  transition: opacity 0.3s ease;
 }
 
 .ProjectOverlay {
@@ -76,8 +70,9 @@
   height: 100%;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0);
-  color: var(--secondary-text-color);
-  font-size: 1.5rem;
+  color: var(--primary-text-color);
+  -webkit-text-stroke: 2px var(--secondary-text-color);
+  font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
   transition: background-color 0.3s ease, opacity 0.3s ease;
@@ -85,11 +80,12 @@
 }
 
 .ProjectItem:hover .ProjectOverlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
 
-.ProjectLabels span, .ProjectLabels a {
+.ProjectLabels span,
+.ProjectLabels a {
   border: 1px solid #8D7C60;
   padding: 5px 10px;
   border-radius: 15px;
@@ -103,7 +99,9 @@
 }
 
 .ProjectLabels a:hover {
-  background-color: #1A1A1A;
+  border: 1px solid var(--secondary-text-color);
+  background-color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-decoration: none;
   padding: 5px 10px;
   transition: all 0.3s ease;
@@ -141,17 +139,24 @@
 }
 
 @keyframes contentAppear {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Media Query for Landscape Phones to Tablets */
 @media (min-width: 481px) and (max-width: 1440px) {
   .ProjectsSection {
     padding: 15px;
   }
 
-  .ProjectsContent, .ProjectPair {
+  .ProjectsContent,
+  .ProjectPair {
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -178,7 +183,8 @@
     gap: 5px;
   }
 
-  .ProjectLabels span, .ProjectLabels a {
+  .ProjectLabels span,
+  .ProjectLabels a {
     font-size: 0.8rem;
   }
 
@@ -187,14 +193,14 @@
   }
 }
 
-/* Media Query for Phones */
 @media (max-width: 480px) {
   .ProjectsSection {
     padding: 10px;
     height: auto;
   }
 
-  .ProjectsContent, .ProjectPair {
+  .ProjectsContent,
+  .ProjectPair {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,7 +242,8 @@
     gap: 5px;
   }
 
-  .ProjectLabels span, .ProjectLabels a {
+  .ProjectLabels span,
+  .ProjectLabels a {
     font-size: 0.8rem;
   }
 

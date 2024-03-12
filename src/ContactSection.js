@@ -46,7 +46,7 @@ function ContactSection() {
       <div className="ContactContent">
         <div className="ContactForm">
           <p>Got an incredible idea? Let's collaborate and turn it into reality.</p>
-          <p>I am actively seeking opportunities and internships with startups,agencies, and companies.</p>
+          <p>I'm ready to dive into a dynamic role with a forward-thinking company.</p>
           <form onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
