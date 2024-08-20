@@ -1,0 +1,148 @@
+.navbar-custom {
+  background-color: var(--background-color) !important;
+  color: var(--primary-text-color) !important;
+  width: calc(100% - 15px);
+  z-index: 1000;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: navbarSlideDown 2s ease-out forwards !important;
+  animation-delay: 1s;
+  transition: background-color 0.5s linear, color 0.3s linear !important;
+}
+
+@keyframes navbarSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: auto;
+}
+
+.nav-item {
+  padding: 0.8rem;
+}
+
+.nav-link {
+  color: var(--primary-text-color) !important;
+  transition: color 0.3s ease, background-color 0.3s ease !important;
+}
+
+.nav-link:hover {
+  color: var(--link-color) !important;
+  background-color: transparent !important;
+}
+
+.lets-talk-btn {
+  background-color: var(--primary-text-color) !important;
+  color: var(--background-color) !important;
+  border: 2px solid var(--primary-text-color) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.lets-talk-btn:hover {
+  background-color: transparent !important;
+  color: var(--secondary-text-color) !important;
+  border-color: var(--secondary-text-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--primary-text-color) !important;
+}
+
+.navbar-toggler-icon {
+  border-color: var(--primary-text-color) !important;
+}
+
+.form-select {
+  background-color: var(--background-color) !important;
+  color: var(--primary-text-color) !important;
+  border: 1px solid var(--primary-text-color) !important;
+  position: relative !important;
+  background-position: right 0.5rem center !important;
+  width: auto !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.form-select:focus {
+  border-color: var(--link-color) !important;
+  outline: none !important;
+}
+
+@media (max-width: 600px) {
+  .nav-link {
+    font-size: 0.8rem !important;
+  }
+
+  .nav-logo {
+    max-width: 60px !important;
+  }
+
+  .form-select {
+    margin: 0 auto !important;
+    display: block;
+    width: fit-content;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .nav-link {
+    margin: 0 0.5rem !important;
+  }
+
+  .nav-logo {
+    max-width: 70px !important;
+  }
+
+  .navbar-custom {
+    padding: 0.5rem !important;
+  }
+
+  .form-select {
+    margin: 0 auto !important;
+    display: block;
+    width: fit-content;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .nav-link {
+    font-size: 1rem !important;
+  }
+
+  .nav-logo {
+    max-width: 80px !important;
+  }
+
+  .form-select {
+    margin: 0 auto !important;
+    display: block;
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1201px) {
+  .nav-link {
+    font-size: 1.2rem !important;
+  }
+
+  .nav-logo {
+    max-width: 100px !important;
+  }
+}

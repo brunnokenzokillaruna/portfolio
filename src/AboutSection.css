@@ -1,0 +1,144 @@
+.AboutSection {
+  height: 90vh;
+  padding: 120px 20px 60px 20px;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+}
+
+.AboutTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  animation: contentAppear 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.AboutContent {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 60px;
+  margin-top: 30px;
+}
+
+.AboutText {
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutText p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.AboutText .paragraph {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.AboutImage img {
+  max-width: 55%;
+  max-height: 500px;
+  object-fit: scale-down;
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: contentAppear 2s ease-out forwards;
+  animation-delay: 1s;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .AboutSection {
+    height: auto;
+  }
+  
+  .AboutTitle {
+    font-size: 1.5rem;
+  }
+
+  .AboutText p:first-child {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .AboutImage img {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .AboutSection {
+    height: auto;
+  }
+  
+  .AboutTitle {
+    font-size: 2rem;
+  }
+
+  .AboutText p:first-child {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .AboutImage img {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .AboutTitle {
+    font-size: 2rem;
+  }
+
+  .AboutText p:first-child {
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .AboutImage img {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1536px) {
+  .AboutText p:first-child {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .AboutImage img {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1537px) {
+  .AboutText p {
+    font-size: 1.75rem;
+  }
+
+  .AboutImage img {
+    max-height: 700px;
+  }
+}
