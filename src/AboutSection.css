@@ -1,0 +1,248 @@
+/* Title font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* Section container */
+.AboutSection {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 0 60px;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section heading */
+.AboutTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 3rem;
+  text-align: center;
+  opacity: 1;
+  font-family: "Archivo Black", sans-serif;
+  letter-spacing: 1px;
+  padding: 0 20px;
+}
+
+/* Two-column layout */
+.AboutContent {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Bio text column */
+.AboutText {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Text fade-in */
+.AboutText.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Bio text styling */
+.AboutText p:first-child {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.AboutText .paragraph {
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Image column */
+.AboutImage {
+  flex: 1 1 400px;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image fade-in */
+.AboutImage.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Profile image */
+.AboutImage img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Image scale animation */
+.AboutImage img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive layouts */
+/* Small phones (< 360px) */
+@media (max-width: 360px) {
+  .AboutSection {
+    padding: 80px 0 40px;
+    min-height: auto;
+  }
+  
+  .AboutTitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    padding: 0 15px;
+  }
+
+  .AboutContent {
+    padding: 0 15px;
+  }
+
+  .AboutText p:first-child {
+    font-size: 0.85rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 0.85rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
+  }
+}
+
+/* Large phones (361px - 600px) */
+@media (min-width: 361px) and (max-width: 600px) {
+  .AboutSection {
+    padding: 100px 0 40px;
+    min-height: auto;
+  }
+  
+  .AboutTitle {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 0 15px;
+  }
+
+  .AboutContent {
+    padding: 0 15px;
+  }
+
+  .AboutText p:first-child {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Tablets (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .AboutSection {
+    padding: 120px 0 60px;
+  }
+  
+  .AboutTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 0 20px;
+  }
+
+  .AboutContent {
+    padding: 0 20px;
+    gap: 1.5rem;
+  }
+
+  .AboutText p:first-child {
+    font-size: 0.95rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small desktops (901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .AboutSection {
+    padding: 120px 0 60px;
+  }
+
+  .AboutTitle {
+    font-size: 2.5rem;
+    padding: 0 30px;
+  }
+
+  .AboutContent {
+    padding: 0 30px;
+    gap: 2rem;
+  }
+}
+
+/* Desktop styles (1201px to 1536px) */
+@media (min-width: 1201px) and (max-width: 1536px) {
+  .AboutSection {
+    padding: 120px 0 60px;
+  }
+
+  .AboutContent {
+    padding: 0 40px;
+    gap: 3rem;
+  }
+
+  .AboutText p:first-child {
+    font-size: 1rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 1rem;
+  }
+}
+
+/* Large desktop styles (larger than 1536px) */
+@media (min-width: 1537px) {
+  .AboutSection {
+    padding: 120px 0 60px;
+  }
+
+  .AboutContent {
+    padding: 0 60px;
+    gap: 4rem;
+  }
+
+  .AboutText p:first-child {
+    font-size: 1.2rem;
+  }
+  
+  .AboutText .paragraph {
+    font-size: 1.2rem;
+  }
+
+  .AboutImage img {
+    max-width: 500px;
+  }
+}

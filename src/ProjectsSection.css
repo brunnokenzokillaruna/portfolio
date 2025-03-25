@@ -1,0 +1,398 @@
+/* Font for section titles */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* Main section layout */
+.ProjectsSection {
+  width: 100%;
+  background-color: var(--background-color);
+  padding: 120px 0 0; /* Remove bottom padding completely */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Section title with fade-in effect */
+.ProjectsTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 5rem;
+  text-align: center;
+  opacity: 0;
+  font-family: "Archivo Black", sans-serif;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  transition: opacity 0.8s ease-out;
+}
+
+.ProjectsTitle.visible {
+  opacity: 1;
+}
+
+/* Grid layout for project cards */
+.projects-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content; /* Important: Let grid items determine their height */
+  gap: 48px;
+  margin-bottom: 0; /* Remove bottom margin */
+  padding-bottom: 60px; /* Add padding to bottom to create space between projects and contact */
+}
+
+/* Individual project card styling */
+.project-card {
+  background: var(--background-color);
+  border-radius: 16px;
+  border: 1px solid rgba(161, 144, 115, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: grid; /* Change to grid layout */
+  grid-template-rows: auto 1fr; /* Auto height for preview, 1fr for content */
+  min-height: 0; /* Important: Prevent grid item expansion */
+  height: 100%; /* Fill grid cell */
+}
+
+/* Project image container */
+.project-preview {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Project details section */
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0; /* Important: Prevent content expansion */
+}
+
+/* Project title and links area */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px; /* Add gap for better spacing */
+}
+
+.project-meta {
+  flex: 1;
+  min-width: 0; /* Important: Allow text truncation */
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+  margin-bottom: 8px;
+}
+
+.project-year {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+}
+
+/* External link buttons */
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  color: var(--primary-text-color);
+  background: transparent;
+  border: 1px solid var(--secondary-text-color);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.project-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.project-link svg path {
+  fill: currentColor;
+}
+
+.link-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Icon theming for dark/light modes */
+[data-theme='dark'] .project-link svg path,
+[data-theme='dark'] .project-link img {
+  fill: var(--primary-text-color) !important;
+  color: var(--primary-text-color) !important;
+  filter: brightness(0) saturate(100%) invert(93%) sepia(5%) saturate(694%) hue-rotate(7deg) brightness(97%) contrast(91%);
+}
+
+[data-theme='light'] .project-link svg path,
+[data-theme='light'] .project-link img {
+  fill: var(--primary-text-color) !important;
+  color: var(--primary-text-color) !important;
+  filter: brightness(0) saturate(100%) invert(10%) sepia(0%) saturate(1784%) hue-rotate(157deg) brightness(92%) contrast(97%);
+}
+
+/* Project description area */
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 0; /* Important: Prevent content expansion */
+}
+
+.project-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--primary-text-color);
+  opacity: 0.9;
+  max-width: 100%; /* Ensure text wrapping */
+  overflow-wrap: break-word; /* Handle long words */
+  text-align: justify; /* Justify text */
+}
+
+/* Technology tags */
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto; /* Push to bottom */
+  justify-content: center; /* Center tech tags */
+}
+
+.tech-tag {
+  padding: 6px 12px;
+  background: rgba(161, 144, 115, 0.1);
+  color: var(--secondary-text-color);
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Interactive animations */
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-preview:hover .project-image {
+  transform: scale(1.02);
+}
+
+.project-link:hover {
+  background: var(--primary-button-bg-color);
+  color: var(--primary-button-text-color);
+  border-color: var(--primary-button-text-color);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-link:hover .link-icon {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(100%) !important;
+}
+
+.project-link.github:hover,
+.project-link.website:hover {
+  background: var(--primary-button-bg-color);
+  border-color: var(--primary-button-text-color);
+}
+
+.tech-tag:hover {
+  background: var(--secondary-text-color);
+  color: var(--background-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive layouts */
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .ProjectsSection {
+    padding: 80px 0 0; /* Reduce top padding for mobile */
+  }
+
+  .ProjectsTitle {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 32px;
+    padding: 0 16px;
+    padding-bottom: 40px;
+  }
+
+  .project-preview {
+    height: 220px; /* Reduce image height on mobile */
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-header {
+    flex-direction: column; /* Stack title and links vertically */
+    align-items: flex-start;
+    gap: 12px; /* Reduced gap for better spacing */
+    width: 100%; /* Ensure full width */
+  }
+
+  .project-meta {
+    width: 100%; /* Full width for meta section */
+  }
+
+  .project-links {
+    margin-left: 0; /* Remove left margin */
+    margin-top: 0; /* Remove top margin as gap handles spacing */
+    align-self: flex-start; /* Align with the start of container */
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .tech-tag {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ProjectsSection {
+    padding: 100px 0 0;
+  }
+
+  .ProjectsTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 30px;
+    padding: 0 24px;
+    padding-bottom: 50px;
+  }
+
+  .project-preview {
+    height: 250px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}
+
+/* Small desktop (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .ProjectsSection {
+    padding: 120px 0 0;
+  }
+
+  .ProjectsTitle {
+    font-size: 2.8rem;
+  }
+
+  .projects-container {
+    gap: 40px;
+    padding-bottom: 60px;
+  }
+
+  .project-preview {
+    height: 280px;
+  }
+}
+
+/* Large desktop (1367px+) */
+@media (min-width: 1367px) {
+  .ProjectsSection {
+    padding: 120px 0 0;
+  }
+
+  .ProjectsTitle {
+    font-size: 3rem;
+  }
+  
+  .projects-container {
+    max-width: 1400px;
+    gap: 50px;
+    padding-bottom: 80px;
+  }
+  
+  .project-content {
+    padding: 30px;
+  }
+  
+  .project-title {
+    font-size: 26px;
+  }
+  
+  .project-description {
+    font-size: 16px;
+  }
+}
+
+/* Icon-specific styling */
+.github-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.website-icon {
+  width: 19px;
+  height: 19px;
+}
+
+/* Dark mode styling for specific icons */
+[data-theme='dark'] .github-icon,
+[data-theme='dark'] .website-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Light mode styling for specific icons */
+[data-theme='light'] .github-icon,
+[data-theme='light'] .website-icon {
+  filter: brightness(0) invert(0.2);
+}
+

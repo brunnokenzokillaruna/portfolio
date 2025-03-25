@@ -1,0 +1,271 @@
+/* Font for navigation elements */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Main navbar styles */
+.navbar-custom {
+  background-color: var(--background-color) !important;
+  color: var(--primary-text-color) !important;
+  width: calc(100% - 15px);
+  z-index: 1000;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  /* Initial state for animation */
+  opacity: 0;
+  animation: navbarSlideDown 2s ease-out forwards !important;
+  animation-delay: 1s;
+  transition: background-color 0.5s linear, color 0.3s linear !important;
+}
+
+/* Entrance animation */
+@keyframes navbarSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brand logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: auto;
+}
+
+/* Custom hamburger icon for dark theme */
+.navbar-toggler {
+  border-color: var(--primary-text-color) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28var(--bs-navbar-color-rgb), 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+[data-theme='dark'] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23EAE3D7' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+[data-theme='light'] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231A1A1A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Navigation menu */
+.nav-item {
+  padding: 0.8rem;
+  position: relative;
+}
+
+/* Nav links styling */
+.nav-link:not(.lets-talk-btn) {
+  color: var(--primary-text-color) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  font-size: 0.95rem !important;
+  text-transform: none !important;
+  opacity: 0.85;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Hover effects */
+.nav-link:not(.lets-talk-btn):hover {
+  opacity: 1;
+}
+
+/* Animated underline */
+.nav-link:not(.lets-talk-btn)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0.3rem;
+  left: 50%;
+  background-color: var(--primary-text-color);
+  transition: all 0.2s ease-in-out !important;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.nav-link:not(.lets-talk-btn):hover::after {
+  width: 40%;
+  opacity: 0.5;
+}
+
+/* CTA button */
+.lets-talk-btn {
+  background-color: var(--primary-text-color) !important;
+  color: var(--background-color) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 0.5rem 1.5rem !important;
+  margin-left: 1rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-family: 'Inter', sans-serif !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* CTA hover animation */
+.lets-talk-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.lets-talk-btn:hover {
+  color: var(--primary-text-color) !important;
+  border: 1px solid var(--primary-text-color) !important;
+}
+
+.lets-talk-btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Language dropdown */
+.form-select {
+  background-color: transparent !important;
+  color: var(--primary-text-color) !important;
+  border: 1px solid var(--primary-text-color) !important;
+  border-radius: 20px !important;
+  padding: 0.4rem 2rem 0.4rem 1rem !important;
+  font-size: 0.95rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  opacity: 0.85;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath stroke='white' stroke-width='2' d='M4 6l4 4 4-4' fill='none'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 16px 12px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Theme-specific dropdown arrow */
+[data-theme='light'] .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath stroke='black' stroke-width='2' d='M4 6l4 4 4-4' fill='none'/%3E%3C/svg%3E") !important;
+}
+
+.form-select:hover {
+  opacity: 1;
+}
+
+/* Dropdown menu items */
+.form-select option {
+  background-color: var(--background-color) !important;
+  color: var(--primary-text-color) !important;
+  padding: 0.5rem !important;
+}
+
+/* Clean dropdown states */
+.form-select option:checked,
+.form-select option:hover,
+.form-select option:focus,
+.form-select option:active {
+  background-color: var(--background-color) !important;
+  color: var(--primary-text-color) !important;
+}
+
+/* Mobile layout (< 600px) */
+@media (max-width: 600px) {
+  .nav-link:not(.lets-talk-btn) {
+    font-size: 0.9rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  .lets-talk-btn {
+    margin: 0.5rem auto !important;
+    text-align: center !important;
+    display: inline-block !important;
+    padding: 0.5rem 1.3rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .nav-logo {
+    max-width: 80px !important;
+  }
+
+  .form-select {
+    margin: 0 auto !important;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Tablet layout (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .nav-link:not(.lets-talk-btn) {
+    font-size: 0.9rem !important;
+    margin: 0 0.3rem !important;
+  }
+
+  .lets-talk-btn {
+    padding: 0.5rem 1.4rem !important;
+  }
+
+  .nav-logo {
+    max-width: 90px !important;
+  }
+
+  .navbar-custom {
+    padding: 0.5rem !important;
+  }
+
+  .form-select {
+    margin: 0 auto !important;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Small desktop (901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .nav-link:not(.lets-talk-btn) {
+    font-size: 0.95rem !important;
+  }
+
+  .nav-logo {
+    max-width: 80px !important;
+  }
+
+  .form-select {
+    margin: 0 auto !important;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Large desktop (1201px+) */
+@media (min-width: 1201px) {
+  .nav-link:not(.lets-talk-btn) {
+    font-size: 0.95rem !important;
+  }
+
+  .nav-logo {
+    max-width: 100px !important;
+  }
+}

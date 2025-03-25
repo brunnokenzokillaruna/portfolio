@@ -1,0 +1,198 @@
+/* Title font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* Hero container */
+.HeroSection {
+  padding: 200px 20px 60px 20px;
+  background-color: var(--background-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background image container */
+.hero-image-wrapper {
+  position: relative;
+  z-index: 0;
+  animation: shrinkImage 1.5s ease-out forwards;
+}
+
+/* Background image */
+.hero-image {
+  width: 100%;
+  max-width: 685px;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+/* Heading container */
+.hero-text-wrapper {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Base heading styles */
+.HeroSection h1,
+.HeroSection h2 {
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  opacity: 0;
+  animation: textAppear 2s ease-out forwards;
+  animation-delay: 1s;
+  font-family: "Archivo Black", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Outlined greeting text */
+.HeroSection h2.outline-text {
+  -webkit-text-stroke: 2px #000;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+/* Name heading */
+.HeroSection h1 {
+  font-size: 6rem;
+  color: #000;
+}
+
+/* Language-specific text sizing */
+.HeroSection.fr h1,
+.HeroSection.pt h1 {
+  font-size: 4.7rem;
+}
+
+/* Fade-in animation */
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background zoom animation */
+@keyframes shrinkImage {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive layouts */
+/* Mobile (< 600px) */
+@media (max-width: 600px) {
+  .HeroSection h2.outline-text {
+    font-size: 1.8rem;
+    -webkit-text-stroke: 1px #000;
+  }
+  
+  .HeroSection h1 {
+    font-size: 2.2rem;
+  }
+  
+  .HeroSection.fr h1,
+  .HeroSection.pt h1,
+  .HeroSection.es h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-image {
+    max-width: 350px;
+  }
+}
+
+/* Tablet (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .HeroSection h2.outline-text {
+    font-size: 2.4rem;
+    -webkit-text-stroke: 1.5px #000;
+  }
+  
+  .HeroSection h1 {
+    font-size: 2.8rem;
+  }
+  
+  .HeroSection.fr h1,
+  .HeroSection.pt h1,
+  .HeroSection.es h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-image {
+    max-width: 400px;
+  }
+}
+
+/* Small desktop (901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .HeroSection h2.outline-text {
+    font-size: 2.8rem;
+    -webkit-text-stroke: 1.5px #000;
+  }
+  
+  .HeroSection h1 {
+    font-size: 3.2rem;
+  }
+  
+  .HeroSection.fr h1,
+  .HeroSection.pt h1,
+  .HeroSection.es h1 {
+    font-size: 2.9rem;
+  }
+
+  .hero-image {
+    max-width: 600px;
+  }
+}
+
+/* Desktop (1201px - 1536px) */
+@media (min-width: 1201px) and (max-width: 1536px) {
+  .HeroSection h2.outline-text {
+    font-size: 4.8rem;
+    -webkit-text-stroke: 2px #000;
+  }
+  
+  .HeroSection h1 {
+    font-size: 5.2rem;
+  }
+  
+  .HeroSection.fr h1,
+  .HeroSection.pt h1,
+  .HeroSection.es h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-image {
+    max-width: 685px;
+  }
+}
+
+/* Large desktop (1537px+) */
+@media (min-width: 1537px) {
+  .HeroSection h2.outline-text {
+    font-size: 5.8rem;
+    -webkit-text-stroke: 2px #000;
+  }
+  
+  .HeroSection h1 {
+    font-size: 6.2rem;
+  }
+  
+  .hero-image {
+    max-width: 750px;
+  }
+}

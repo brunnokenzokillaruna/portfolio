@@ -1,0 +1,215 @@
+/* Archivo Black font for headings */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* Section container */
+.ServicesSection {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 0 60px;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Section title with fade-in animation */
+.ServicesTitle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 5rem;
+  text-align: center;
+  opacity: 0;
+  font-family: "Archivo Black", sans-serif;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  transition: opacity 0.8s ease-out;
+}
+
+.ServicesTitle.visible {
+  opacity: 1;
+}
+
+/* Carousel container for tech stack sliders */
+.carousels-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding: 0 20px;
+}
+
+/* Slider component setup */
+.slider {
+  height: 120px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: fit-content;
+}
+
+.slide-track.reverse {
+  animation-direction: reverse;
+}
+
+.slide {
+  height: 120px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 8px;
+}
+
+/* Icon styling and hover effects */
+.service-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.slide:hover .service-icon {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.icon-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.slide:hover .icon-name {
+  opacity: 1;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50%));
+  }
+}
+
+/* Pause animation on hover */
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+/* Mobile - Small screens (360px and below) */
+@media (max-width: 360px) {
+  .ServicesSection {
+    padding: 80px 0 40px;
+  }
+  
+  .ServicesTitle {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .carousels-container {
+    gap: 4rem;
+  }
+
+  .slide {
+    padding: 0 1rem;
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-name {
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile - Medium screens (361px - 600px) */
+@media (min-width: 361px) and (max-width: 600px) {
+  .ServicesSection {
+    padding: 100px 0 40px;
+  }
+  
+  .ServicesTitle {
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .carousels-container {
+    gap: 5rem;
+  }
+
+  .slide {
+    padding: 0 1.5rem;
+  }
+
+  .service-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-name {
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablet (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .ServicesSection {
+    padding: 120px 0 60px;
+  }
+  
+  .ServicesTitle {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .slide {
+    padding: 0 1.75rem;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Small desktop (901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .slide {
+    padding: 0 2rem;
+  }
+
+  .service-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

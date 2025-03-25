@@ -1,0 +1,169 @@
+/* Footer layout */
+.Footer {
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(161, 144, 115, 0.1);
+  padding: 0;
+}
+
+/* Copyright text */
+.copyright {
+  opacity: 0.9;
+  font-weight: 400;
+  padding: 16px 0;
+}
+
+/* Back to top button */
+.BackToTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  padding: 16px 0;
+}
+
+/* Button text */
+.back-text {
+  margin-right: 2px;
+}
+
+/* Double arrow container */
+.Arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+/* Arrow icon */
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+  margin: -4px 0;
+  display: block;
+}
+
+/* Interactive states */
+.BackToTop:hover {
+  opacity: 1;
+}
+
+.BackToTop:hover .arrow-icon {
+  transform: translateY(-2px);
+}
+
+.BackToTop:hover .arrow-icon:last-child {
+  transform: translateY(-1px);
+}
+
+/* Theme-specific colors */
+[data-theme='dark'] .arrow-icon {
+  color: var(--primary-text-color);
+}
+
+[data-theme='light'] .arrow-icon {
+  color: var(--primary-text-color);
+}
+
+/* Responsive layouts */
+/* Small phones (< 480px) */
+@media (max-width: 480px) {
+  .Footer {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 16px 20px 8px;
+  }
+
+  .BackToTop {
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+    padding: 8px 20px 16px;
+  }
+
+  .arrow-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Large phones (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .copyright {
+    padding: 18px 24px;
+  }
+
+  .BackToTop {
+    padding: 18px 24px;
+  }
+
+  .copyright, .BackToTop {
+    font-size: 0.85rem;
+  }
+
+  .arrow-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .copyright {
+    padding: 20px 32px;
+  }
+
+  .BackToTop {
+    padding: 20px 32px;
+  }
+}
+
+/* Small desktops (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .copyright {
+    padding: 20px 40px;
+  }
+
+  .BackToTop {
+    padding: 20px 40px;
+  }
+}
+
+/* Large desktops (1280px+) */
+@media (min-width: 1280px) {
+  .copyright {
+    padding: 24px 60px;
+  }
+
+  .BackToTop {
+    padding: 24px 60px;
+  }
+
+  .copyright, .BackToTop {
+    font-size: 0.95rem;
+  }
+
+  .arrow-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

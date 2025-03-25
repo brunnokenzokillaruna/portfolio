@@ -1,0 +1,33 @@
+/* Light theme colors */
+:root {
+    --background-color: #EAE3D7;
+    --primary-text-color: #1A1A1A;
+    --secondary-text-color: #8D7C60;
+    --primary-button-bg-color: #1A1A1A;
+    --primary-button-text-color: #8D7C60;
+    --secondary-button-bg-color: #1A1A1A;
+    --secondary-button-text-color: #A19073;
+    --link-color: #A89777;
+    --border-color: #1A1A1A;
+    --hover: #2e2e2e;
+  }
+  
+  /* Dark theme colors */
+  [data-theme='dark'] {
+    --background-color: #1A1A1A;
+    --primary-text-color: #EAE3D7;
+    --secondary-text-color: #8D7C60;
+    --primary-button-bg-color: #8D7C60;
+    --primary-button-text-color: #1A1A1A;
+    --secondary-button-bg-color: #A19073;
+    --secondary-button-text-color: #1A1A1A;
+    --link-color: #786951;
+    --border-color: #EAE3D7;
+    --hover: #cab590;
+  }
+
+  /* Smooth theme transitions */
+  * {
+    transition: background-color 0.5s linear, color 0.3s linear, border-color 0.5s linear;
+  }
+  

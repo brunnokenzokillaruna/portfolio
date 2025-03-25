@@ -1,0 +1,50 @@
+/* Hero section container */
+.PhraseSection {
+  height: 90vh;
+  padding: 120px 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+/* Tagline text with fade-in animation */
+.PhraseSection p {
+  font-weight: 300;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeInText 2s ease-out forwards;
+}
+
+/* Responsive typography */
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .PhraseSection p {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+}
+
+/* Tablet (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .PhraseSection p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small desktop (901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .PhraseSection p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Large desktop (1201px+) */
+@media (min-width: 1201px) {
+  .PhraseSection p {
+    font-size: 2.5rem;
+  }
+}
