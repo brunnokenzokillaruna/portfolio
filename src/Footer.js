@@ -16,7 +16,7 @@ function Footer() {
   };
 
   return (
-    <footer className="Footer">
+    <footer className="Footer" role="contentinfo">
       {/* Copyright section */}
       <div className="copyright">
         <span>&copy; {new Date().getFullYear()} {t('Brunno\'s Portfolio')}</span>
@@ -29,7 +29,7 @@ function Footer() {
         aria-label={t('Back to the top')}
       >
         <span className="back-text">{t('Back to the top')}</span>
-        <div className="Arrows">
+        <div className="Arrows" aria-hidden="true">
           <svg 
             className="arrow-icon" 
             width="24" 

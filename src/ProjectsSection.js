@@ -8,6 +8,7 @@ import projectImage2 from './images/projects/grandeur.png';
 import projectImage3 from './images/projects/wealthwise.png';
 import projectImage4 from './images/projects/TriviaGame.png';
 import projectImage5 from './images/projects/careertrack.png';
+import projectImage6 from './images/projects/linguatalk.png';
 import githubIcon from './images/github-original.svg';
 import externalLinkIcon from './images/external-link.svg';
 
@@ -16,17 +17,24 @@ const projects = [
     name: "Wealth Wise",
     image: projectImage3,
     year: "2025",
-    technologies: ["C#", "Windows Forms", ".NET Framework", "SQLite"],
-    website: "https://wealthwise-pro.vercel.app/",
-    description: "wealth_wise_description"
+    technologies: ["React", "Tailwind", "JavaScript", "Node.js", "Express", "Supabase", "JWT", "RESTful", "Cursor AI Code Editor"],
+    website: "https://wealthwise-three.vercel.app/",
+    description: "A financial planning and management application designed to help users track expenses, manage budgets, and achieve financial goals. The system features multi-language support, interactive analytics dashboards, bill management with reminders, savings tracking, and investment portfolio."
   },
   {
     name: "CareerTrack Pro",
     image: projectImage5,
     year: "2025",
-    technologies: ["React", "Node.js", "MongoDB", "Express.js", "JWT"],
-    website: "https://brunnokenzokillaruna.github.io/careertrackpro-site/",
-    description: "career_track_description"
+    technologies: ["Next.js", "React", "Tailwind", "TypeScript", "React-PDF/Renderer", "Supabase", "Gemini API", "Cursor AI Code Editor"],
+    website: "https://careertrackpro.vercel.app/",
+    description: "A comprehensive career tracking and job application management system designed to help professionals manage their career progression, track job applications, and maintain their professional profile. The system features AI-powered document generation, skills analysis, and technology experience tracking."
+  },
+  {
+    name: "LinguaTalk",
+    image: projectImage6,
+    year: "2025",
+    technologies: ["React", "Node.js", "Web Speech API", "Express", "MongoDB", "TailwindCSS"],
+    description: "An interactive language practice platform that helps users improve speaking skills in English and French by simulating roleplay conversations using AI technology, voice recognition, and voice output features."
   },
   {
     name: "Info Stream",
@@ -72,12 +80,19 @@ const ProjectsSection = () => {
             key={`project-${index}`}
           >
             <div className="project-preview">
-              <img 
-                src={project.image} 
-                alt={`${project.name} preview`} 
-                className="project-image" 
-                loading="lazy"
-              />
+              {project.image && (
+                <img 
+                  src={project.image} 
+                  alt={`${project.name} preview`} 
+                  className="project-image" 
+                  loading="lazy"
+                />
+              )}
+              {!project.image && (
+                <div className="project-placeholder">
+                  {project.name.charAt(0)}
+                </div>
+              )}
             </div>
 
             <div className="project-content">
@@ -113,7 +128,15 @@ const ProjectsSection = () => {
               </header>
 
               <div className="project-body">
-                <p className="project-description">{t(project.description)}</p>
+                <p className="project-description">
+                  {project.description.startsWith('info_stream_description') || 
+                   project.description.startsWith('grandeur_description') || 
+                   project.description.startsWith('trivia_quest_description') || 
+                   project.description.startsWith('wealth_wise_description') || 
+                   project.description.startsWith('career_track_description') 
+                    ? t(project.description) 
+                    : project.description}
+                </p>
                 
                 <div className="project-tech-stack">
                   {project.technologies.map((tech, techIndex) => (
