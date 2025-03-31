@@ -8,7 +8,6 @@ import projectImage2 from './images/projects/grandeur.png';
 import projectImage3 from './images/projects/wealthwise.png';
 import projectImage4 from './images/projects/TriviaGame.png';
 import projectImage5 from './images/projects/careertrack.png';
-import projectImage6 from './images/projects/linguatalk.png';
 import githubIcon from './images/github-original.svg';
 import externalLinkIcon from './images/external-link.svg';
 
@@ -31,7 +30,6 @@ const projects = [
   },
   {
     name: "LinguaTalk",
-    image: projectImage6,
     year: "2025",
     technologies: ["React", "Node.js", "Web Speech API", "Express", "MongoDB", "TailwindCSS"],
     description: "An interactive language practice platform that helps users improve speaking skills in English and French by simulating roleplay conversations using AI technology, voice recognition, and voice output features."
