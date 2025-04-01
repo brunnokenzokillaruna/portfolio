@@ -63,6 +63,7 @@
   overflow: hidden;
   border-radius: 16px 16px 0 0;
   background: rgba(0, 0, 0, 0.05);
+  position: relative; /* Added for positioning the development badge */
 }
 
 .project-image {
@@ -86,6 +87,45 @@
   opacity: 0.7;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+/* Development badge for projects in development */
+.development-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.development-badge span {
+  background: var(--primary-button-bg-color);
+  color: var(--primary-button-text-color);
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transform: rotate(-15deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+/* Development tag in project metadata */
+.development-tag {
+  display: inline-block;
+  font-size: 13px;
+  background: var(--primary-button-bg-color);
+  color: var(--primary-button-text-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-weight: 500;
 }
 
 /* Project details section */

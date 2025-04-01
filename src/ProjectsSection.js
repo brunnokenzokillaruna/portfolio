@@ -31,6 +31,7 @@ const projects = [
   {
     name: "LinguaTalk",
     year: "2025",
+    status: "in-development",
     technologies: ["React", "Node.js", "Web Speech API", "Express", "MongoDB", "TailwindCSS"],
     description: "An interactive language practice platform that helps users improve speaking skills in English and French by simulating roleplay conversations using AI technology, voice recognition, and voice output features."
   },
@@ -91,6 +92,11 @@ const ProjectsSection = () => {
                   {project.name.charAt(0)}
                 </div>
               )}
+              {project.status === "in-development" && (
+                <div className="development-badge">
+                  <span>{t('UNDER DEVELOPMENT')}</span>
+                </div>
+              )}
             </div>
 
             <div className="project-content">
@@ -98,6 +104,9 @@ const ProjectsSection = () => {
                 <div className="project-meta">
                   <h3 className="project-title">{project.name}</h3>
                   <span className="project-year">{project.year}</span>
+                  {project.status === "in-development" && (
+                    <span className="development-tag">{t('In Progress')}</span>
+                  )}
                 </div>
                 <div className="project-links">
                   {project.github && (
