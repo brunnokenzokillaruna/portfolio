@@ -49,7 +49,7 @@ const projects = [
     year: "2022",
     technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
     github: "https://github.com/brunnokenzokillaruna/grandeur/",
-    website: "https://grandeur-real-estate.vercel.app/",
+    website: "https://grandeur-roan.vercel.app/",
     description: "grandeur_description"
   },
   {
