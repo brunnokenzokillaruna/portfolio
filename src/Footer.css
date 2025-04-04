@@ -83,24 +83,25 @@
 /* Extra Small devices (< 480px) */
 @media (max-width: 480px) {
   .Footer {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 0;
     align-items: center;
     padding: 8px 16px;
   }
 
   .copyright {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    text-align: left;
     font-size: 0.8rem;
-    padding: 12px 0 4px;
+    padding: 12px 0;
   }
 
   .BackToTop {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-end;
     font-size: 0.8rem;
-    padding: 4px 0 12px;
+    padding: 12px 0;
   }
 
   .arrow-icon {

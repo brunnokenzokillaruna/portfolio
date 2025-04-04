@@ -95,6 +95,14 @@
 /* Responsive layouts */
 /* Mobile (< 600px) */
 @media (max-width: 600px) {
+  .HeroSection {
+    padding: 20px;
+  }
+  
+  .hero-text-wrapper {
+    top: 50%;
+  }
+  
   .HeroSection h2.outline-text {
     font-size: 1.8rem;
     -webkit-text-stroke: 1px #000;
