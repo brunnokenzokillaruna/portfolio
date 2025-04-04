@@ -42,6 +42,11 @@ const resources = {
       "info_stream_description": "A modern news application for Android devices that delivers real-time updates and personalized content. Features include customizable news feeds, bookmark functionality, and offline reading capability.",
       "grandeur_description": "A sophisticated real estate platform offering seamless property browsing, advanced search functionality, and interactive virtual tours. Built with modern web technologies for optimal performance.",
       "trivia_quest_description": "An engaging quiz application featuring multiple categories, difficulty levels, and a scoring system. Includes a vast database of questions and real-time feedback.",
+      "UNDER DEVELOPMENT": "UNDER DEVELOPMENT",
+      "In Progress": "In Progress",
+      "LinguaTalk_description": "An interactive language practice platform that helps users improve speaking skills in English and French by simulating roleplay conversations using AI technology, voice recognition, and voice output features.",
+      "WealthWise_description": "A financial planning and management application designed to help users track expenses, manage budgets, and achieve financial goals. The system features multi-language support, interactive analytics dashboards, bill management with reminders, savings tracking, and investment portfolio.",
+      "CareerTrackPro_description": "A comprehensive career tracking and job application management system designed to help professionals manage their career progression, track job applications, and maintain their professional profile. The system features AI-powered document generation, skills analysis, and technology experience tracking.",
     }
   },
   fr: {
@@ -83,6 +88,11 @@ const resources = {
       "info_stream_description": "Une application d'actualités moderne pour les appareils Android qui fournit des mises à jour en temps réel et du contenu personnalisé. Les fonctionnalités incluent des flux d'actualités personnalisables, des favoris et la lecture hors ligne.",
       "grandeur_description": "Une plateforme immobilière sophistiquée offrant une navigation fluide des propriétés, une fonction de recherche avancée et des visites virtuelles interactives. Construite avec des technologies web modernes pour des performances optimales.",
       "trivia_quest_description": "Une application de quiz captivante proposant plusieurs catégories, niveaux de difficulté et un système de score. Inclut une vaste base de données de questions et des retours en temps réel.",
+      "UNDER DEVELOPMENT": "EN DÉVELOPPEMENT",
+      "In Progress": "En cours",
+      "LinguaTalk_description": "Une plateforme interactive de pratique linguistique qui aide les utilisateurs à améliorer leurs compétences orales en anglais et en français en simulant des conversations de jeu de rôle à l'aide de la technologie d'IA, de la reconnaissance vocale et des fonctionnalités de sortie vocale.",
+      "WealthWise_description": "Une application de planification et de gestion financière conçue pour aider les utilisateurs à suivre les dépenses, gérer les budgets et atteindre les objectifs financiers. Le système propose un support multilingue, des tableaux de bord analytiques interactifs, une gestion des factures avec rappels, un suivi de l'épargne et un portefeuille d'investissement.",
+      "CareerTrackPro_description": "Un système complet de suivi de carrière et de gestion des candidatures conçu pour aider les professionnels à gérer leur progression de carrière, suivre les candidatures d'emploi et maintenir leur profil professionnel. Le système propose la génération de documents alimentée par l'IA, l'analyse des compétences et le suivi de l'expérience technologique.",
     }
   },
   es: {
@@ -124,6 +134,11 @@ const resources = {
       "info_stream_description": "Una aplicación moderna de noticias para dispositivos Android que ofrece actualizaciones en tiempo real y contenido personalizado. Las características incluyen feeds de notícias personalizables, función de marcadores y lectura sin conexión.",
       "grandeur_description": "Una sofisticada plataforma inmobiliaria que ofrece una navegación fluida de propiedades, funcionalidad de búsqueda avanzada y recorridos virtuales interactivos. Construida con tecnologías web modernas para un rendimiento óptimo.",
       "trivia_quest_description": "Una atractiva aplicación de preguntas con múltiples categorías, niveles de dificultad y un sistema de puntuación. Incluye una amplia base de datos de preguntas y retroalimentación en tiempo real.",
+      "UNDER DEVELOPMENT": "EN DESARROLLO",
+      "In Progress": "En progreso",
+      "LinguaTalk_description": "Una plataforma interactiva de práctica de idiomas que ayuda a los usuarios a mejorar sus habilidades de conversación en inglés y francés mediante la simulación de conversaciones de juego de roles utilizando tecnología de IA, reconocimiento de voz y funciones de salida de voz.",
+      "WealthWise_description": "Una aplicación de planificación y gestión financiera diseñada para ayudar a los usuarios a seguir los gastos, administrar presupuestos y alcanzar objetivos financieros. El sistema cuenta con soporte multilingüe, paneles de análisis interactivos, gestión de facturas con recordatorios, seguimiento de ahorros y cartera de inversiones.",
+      "CareerTrackPro_description": "Un sistema integral de seguimiento de carrera y gestión de solicitudes de empleo diseñado para ayudar a los profesionales a gestionar su progresión profesional, seguir las solicitudes de empleo y mantener su perfil profesional. El sistema cuenta con generación de documentos impulsada por IA, análisis de habilidades y seguimiento de experiencia tecnológica.",
     }
   },
   pt: {
@@ -165,6 +180,11 @@ const resources = {
       "info_stream_description": "Um aplicativo moderno de notícias para dispositivos Android que oferece atualizações em tempo real e conteúdo personalizado. Os recursos incluem feeds de notícias personalizáveis, funcionalidade de favoritos e leitura offline.",
       "grandeur_description": "Uma sofisticada plataforma imobiliária oferecendo navegação fluida de propriedades, funcionalidade de busca avançada e tours virtuais interativos. Construída com tecnologias web modernas para desempenho ideal.",
       "trivia_quest_description": "Um aplicativo envolvente de quiz com múltiplas categorias, níveis de dificuldade e sistema de pontuação. Inclui um vasto banco de dados de perguntas e feedback em tempo real.",
+      "UNDER DEVELOPMENT": "EM DESENVOLVIMENTO",
+      "In Progress": "Em andamento",
+      "LinguaTalk_description": "Uma plataforma interativa de prática de idiomas que ajuda os usuários a melhorar suas habilidades de fala em inglês e francês simulando conversas de role-play usando tecnologia de IA, reconhecimento de voz e recursos de saída de voz.",
+      "WealthWise_description": "Um aplicativo de planejamento e gestão financeira projetado para ajudar os usuários a acompanhar despesas, gerenciar orçamentos e atingir metas financeiras. O sistema apresenta suporte a múltiplos idiomas, painéis analíticos interativos, gerenciamento de contas com lembretes, acompanhamento de economias e portfólio de investimentos.",
+      "CareerTrackPro_description": "Um sistema abrangente de acompanhamento de carreira e gerenciamento de candidaturas a empregos projetado para ajudar profissionais a gerenciar sua progressão na carreira, acompanhar candidaturas a empregos e manter seu perfil profissional. O sistema apresenta geração de documentos com IA, análise de habilidades e acompanhamento de experiência em tecnologia.",
     }
   }
 };

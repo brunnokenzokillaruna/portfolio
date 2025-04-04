@@ -18,7 +18,7 @@ const projects = [
     year: "2025",
     technologies: ["React", "Tailwind", "JavaScript", "Node.js", "Express", "Supabase", "JWT", "RESTful", "Cursor AI Code Editor"],
     website: "https://wealthwise-three.vercel.app/",
-    description: "A financial planning and management application designed to help users track expenses, manage budgets, and achieve financial goals. The system features multi-language support, interactive analytics dashboards, bill management with reminders, savings tracking, and investment portfolio."
+    description: "WealthWise_description"
   },
   {
     name: "CareerTrack Pro",
@@ -26,14 +26,14 @@ const projects = [
     year: "2025",
     technologies: ["Next.js", "React", "Tailwind", "TypeScript", "React-PDF/Renderer", "Supabase", "Gemini API", "Cursor AI Code Editor"],
     website: "https://careertrackpro.vercel.app/",
-    description: "A comprehensive career tracking and job application management system designed to help professionals manage their career progression, track job applications, and maintain their professional profile. The system features AI-powered document generation, skills analysis, and technology experience tracking."
+    description: "CareerTrackPro_description"
   },
   {
     name: "LinguaTalk",
     year: "2025",
     status: "in-development",
     technologies: ["React", "Node.js", "Web Speech API", "Express", "MongoDB", "TailwindCSS"],
-    description: "An interactive language practice platform that helps users improve speaking skills in English and French by simulating roleplay conversations using AI technology, voice recognition, and voice output features."
+    description: "LinguaTalk_description"
   },
   {
     name: "Info Stream",
@@ -136,13 +136,7 @@ const ProjectsSection = () => {
 
               <div className="project-body">
                 <p className="project-description">
-                  {project.description.startsWith('info_stream_description') || 
-                   project.description.startsWith('grandeur_description') || 
-                   project.description.startsWith('trivia_quest_description') || 
-                   project.description.startsWith('wealth_wise_description') || 
-                   project.description.startsWith('career_track_description') 
-                    ? t(project.description) 
-                    : project.description}
+                  {!project.description.includes(' ') ? t(project.description) : project.description}
                 </p>
                 
                 <div className="project-tech-stack">
